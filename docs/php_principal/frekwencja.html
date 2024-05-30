@@ -1,0 +1,129 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" type="image/png" href="../assets/logo.png"/>
+        <title>Gubru</title>
+        <link rel="stylesheet" type="text/css" href="../style/style.css">
+        <div class="loginDiv">
+          Logged in as: principal
+        </div> 
+<div class="topDiv">
+            <img src="../assets/logo.png" height="50px" width="50px"/>
+                Gubru
+            <button class="button" onclick='window.open("logout.html","_self")'>Log out</button>
+</div>
+<div class="menuDiv">
+            <button class="menuButton" onclick='window.open("panel.html","_self")'>User panel</button>
+            <button class="menuButton" onclick='window.open("ogloszenia.html","_self")'>Announcements</button>
+            <button class="menuButton" onclick='window.open("poczta.html","_self")'>Mail</button>
+            <button class="menuButton" onclick='window.open("plikiSzkoly.html","_self")'>School files</button>
+            <button class="menuButton" onclick='window.open("zadania.html","_self")'>Homework</button>
+            <button class="menuButton" onclick='window.open("terminarz.html","_self")'>Timetable</button>
+            <button class="menuButton" onclick='window.open("frekwencja.html","_self")'>Absence</button>
+            <button class="menuButton" onclick='window.open("recive.html","_self")'>Grades</button>
+            
+              <button class="menuButton" onclick='window.open("panelAdmin.html","_self")'>Principal panel</button>
+</div>
+
+<script>
+  function edytuj(a){
+    var mHid = document.getElementById("nieMowNikomu");
+    mHid.value = a;
+
+    var x = document.getElementById("ocenyTable");
+    var y = document.getElementById("edycjaFrekwencji");
+
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+
+  function zamknij(){
+    var x = document.getElementById("ocenyTable");
+    var y = document.getElementById("edycjaFrekwencji");
+
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+
+  function zmienFrekwencje(){
+    var mHid = document.getElementById("nieMowNikomu");
+    var idOc = mHid.value;
+
+    var mHid1 = document.getElementById("optionD");
+    var idOc1 = mHid1.value;
+
+    var nowa = 0;
+    switch(idOc1){
+      case "present":
+        nowa = 0;
+        break;
+      case "absent":
+        nowa = 1;
+        break;
+      case "late":
+        nowa = 2;
+        break;
+      case "exempt":
+        nowa = 3;
+        break;
+      case "!!remove frequency!!":
+        nowa = 4;
+        break;
+    }
+
+    var url = "edytujFrekwencje.html/" + idOc + "/" + nowa;
+    window.open(url);
+    setTimeout(window.location.reload(true), 30000);
+
+  }
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<div class="dziennikTop">Attendance</div>
+<div class="formTermin">
+  <form action="/html/frekwencja.html" method="post" enctype="multipart/form-data" id="usrform">
+  <center>
+    <br>
+        <select name="jakoKto" id="klasy" class="loginorregister" style="width: 33.3%;">
+          <option value="---">---</option>
+          <option value="nauczyciel">See as teacher</option>
+          <option value="uczen">See as student: </option>
+        </select>
+        
+        <select name="klasy" id="klasy" class="loginorregister" style="width: 33.3%;">
+          <option value="---">---</option>
+        <option value="1">Principal Blazejczyk</option><option value="25">Mateusz Blazejczyk</option><option value="26">Teacher Blazejczyk</option>
+          </select>
+          <br><input value="Filter" type="submit" name="submit" class="Loginbutton" style="width: 66.6%;">
+
+            </center>
+  </form>
+</div>
+<div id="ocenyTable"><table class="oceny" border="1">
+<thead>
+  <tr><th class="dataFrekwe">Date</th><th class="nieobeFrekwe">Attendance</th></tr>
+
+
+</th></tr><tr><th>2022-01-08</th><th><button class="nieobecnosc" style="background-color: #999900;" onclick="edytuj(2)">late (12:20)</button></th></tr><tr><th>2022-01-08</th><th><button class="nieobecnosc" style="background-color: #00b300;" onclick="edytuj(1)">present (11:00)</button>
+</thead>
+</table></div>
+
+
+<div id="edycjaFrekwencji" style="display: none;">
+  <div  class="loginForm">
+    <button onclick="zamknij()" class="closeBtn">X</button><br>
+    <input type="text" id="nieMowNikomu" name="nrEdycji" style="display: none;">
+    
+    Nowy typ frekwencji:<br>
+    <select name="optionD" class="loginorregister" id="optionD">
+      <option>present</option>
+      <option>absent</option>
+      <option>late</option>
+      <option>exempt</option>
+      <option style="background-color: red; color: white;">!!remove frequency!!</option>
+    </select>
+
+    <button onclick="zmienFrekwencje()" class="Loginbutton">Edit</button>
+  </div>
+</div>

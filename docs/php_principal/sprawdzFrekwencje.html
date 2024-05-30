@@ -1,0 +1,43 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" type="image/png" href="../assets/logo.png"/>
+        <title>Gubru</title>
+        <link rel="stylesheet" type="text/css" href="../style/style.css">
+        <div class="loginDiv">
+          Logged in as: principal
+        </div> 
+<div class="topDiv">
+            <img src="../assets/logo.png" height="50px" width="50px"/>
+                Gubru
+            <button class="button" onclick='window.open("logout.html","_self")'>Log out</button>
+</div>
+<div class="menuDiv">
+            <button class="menuButton" onclick='window.open("panel.html","_self")'>User panel</button>
+            <button class="menuButton" onclick='window.open("ogloszenia.html","_self")'>Announcements</button>
+            <button class="menuButton" onclick='window.open("poczta.html","_self")'>Mail</button>
+            <button class="menuButton" onclick='window.open("plikiSzkoly.html","_self")'>School files</button>
+            <button class="menuButton" onclick='window.open("zadania.html","_self")'>Homework</button>
+            <button class="menuButton" onclick='window.open("terminarz.html","_self")'>Timetable</button>
+            <button class="menuButton" onclick='window.open("frekwencja.html","_self")'>Absence</button>
+            <button class="menuButton" onclick='window.open("recive.html","_self")'>Grades</button>
+            
+              <button class="menuButton" onclick='window.open("panelAdmin.html","_self")'>Principal panel</button>
+</div>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<div class="dziennikTop">Add attendance</div>
+
+<div id="ocenyTable"><table class="oceny" border="1">
+  <thead>
+    <tr><th class="nrDziennikaFre">Lp</th><th class="imieNazwiskoFre">Name</th><th class="imieNazwiskoFre">Surname</th><th class="Frekfencja">Present</th><th class="Frekfencja">Absent</th><th class="Frekfencja">Late</th><th class="FrekfencjaL">Exempt</th></tr>
+
+<form method="post" action="/html/sprawdzFrekwencje.html/117" id="frekfencja">
+<tr><th>1</th><th>Mateusz</th><th>Blazejczyk</th><th><label for="251">Pr.</label><br><input type="radio" name="25" value="0" id="251"></th><th><label for="252">Ab.</label><br><input type="radio" name="25" value="1" id="252"></th><th><label for="253">Late.</label><br><input type="radio" name="25" value="2" id="253"></th><th><label for="254">Ex.</label><br><input type="radio" name="25" value="3" id="254"></th><input type="text" name="idUczniow" value=";25" style="display: none;"></thead>
+</table>
+<div style="background-color: #000000; float: right; color: white;">
+<a><b>Date of absent: </b></a><input type="datetime-local" name="dataczas" class="inputLogin">
+<input type="submit" name="submit" class="Sendbutton"/>
+</div>
+</form>
+</div>

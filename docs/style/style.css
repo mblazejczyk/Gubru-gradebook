@@ -1,0 +1,660 @@
+body{
+    background-color: rgb(58, 58, 58);
+}
+
+.listaDoWyslania{
+    background-color: rgb(0, 0, 0);
+    width: 25%;
+    height: 450px;
+    overflow: scroll;
+    overflow-x: hidden;
+    color: rgb(255, 255, 255);
+    float: left;
+    font-size: 20px;
+}
+
+.wysylanieWiado{
+    background-color: rgb(0, 0, 0);
+    width: 75%;
+    height: 450px;
+    color: rgb(255, 255, 255);
+    float: right;
+    font-size: 22px;
+}
+
+.button {
+    background-color: #d40000;
+    border: 2px solid #000000;    color: rgb(0, 0, 0);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:disabled {
+    background-color: #440000;
+    border: 2px solid #8a0000;    color: rgb(0, 0, 0);
+    color: #858585;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #8a0000;
+    border: 2px solid #d40000;    color: rgb(0, 0, 0);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Loginbutton {
+    background-color: #00e444;
+    border: 2px solid #00ad34;    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 500px;
+    cursor: pointer;
+}
+.Loginbutton:hover {
+    background-color: #00ad34;
+    border: 2px solid #00e444;    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 500px;
+    cursor: pointer;
+}
+
+.tematWiado{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    border-width: 1px;
+}
+
+.textareaWiado{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    height: 70%;
+    border-width: 1px;
+    color: white;
+    background-color: black;
+}
+
+.Sendbutton {
+    background-color: #00e444;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 500px;
+    float: right;
+    cursor: pointer;
+}
+.Sendbutton {
+    background-color: #00b436;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 500px;
+    float: right;
+    cursor: pointer;
+}
+
+.loginForm{
+    background-color: gray;
+    position: absolute;
+    border: 3px solid #0a0a0a;
+    padding: 20px 20px;
+    margin-left: 30%;
+    margin-right: 34%;
+    color: white;
+    font-size: 23px;
+}
+
+.inputLogin{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 500px;
+}
+
+.loginorregister{
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 500px;
+}
+
+.topDiv {
+    background-color: black;
+    display: flex; 
+    justify-content: space-between;
+    color: white;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.loginDiv {
+    background-color: black;
+     
+    justify-content: right;
+    color: white;
+    font-size: 15px;
+    line-height: 50px;
+    text-align: right;
+}
+
+.menuDiv {
+    background-color: rgb(39, 39, 39);
+    justify-content: right;
+    color: white;
+    font-size: 15px;
+    line-height: 50px;
+    text-align: right;
+}
+
+.PocztamenuDiv {
+    background-color: rgb(22, 22, 22);
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.menuButton {
+    background-color: #002fff;
+    border: 2px solid #0022b9;    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: white;
+    cursor: pointer;
+}
+.menuButton:hover {
+    background-color: #0022b9;
+    border: 2px solid #002fff;    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+.PocztamenuButton {
+    background-color: #5eff94;
+    border: 2px solid #32b45d;    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.PocztamenuButton:hover {
+    background-color: #32b45d;
+    border: 2px solid #5eff94;    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menuButtonDis {
+background-color: #4e4e4e;
+border: none;
+color: rgb(139, 139, 139);
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+}
+.menuButtonDis:hover {
+    background-color: #353535;
+    border: none;
+    color: rgb(139, 139, 139);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+table.oceny {
+    border: 6px solid #000000;
+    background-color: #555555;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+table.oceny td, table.oceny th {
+border: 0px solid #555555;
+padding: 6px 2px;
+}
+table.oceny tbody td {
+font-size: 13px;
+font-weight: bold;
+color: #FFFFFF;
+}
+table.oceny tr:nth-child(even) {
+background: #474747;
+}
+table.oceny thead {
+background: #000000;
+border-bottom: 4px solid #000000;
+}
+table.oceny thead th {
+font-size: 19px;
+font-weight: bold;
+color: #FFFFFF;
+text-align: left;
+border-left: 2px solid #000000;
+}
+table.oceny thead th:first-child {
+border-left: none;
+}
+
+table.oceny tfoot td {
+font-size: 13px;
+}
+
+table.oceny a:link{
+    color: white;
+}
+
+table.oceny a:visited{
+color: white;
+}
+
+th.nrDziennika{
+    width: 5px;
+}
+th.tableButtons{
+    width: 50px;
+}
+th.imieNazwisko{
+    width: 200px;
+}
+th.imieNazwiskoFre{
+    width: 15%;
+}
+th.nrDziennikaFre{
+    width: 5%;
+}
+th.Frekfencja{
+    width: 5%;
+}
+th.FrekfencjaL{
+    width: 45%;
+}
+
+th.nazwaKlasy{
+    width: 60%;
+}
+th.przyciskiKlas{
+    width: 25%;
+}
+
+div.dziennikTop{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    text-decoration: violet;
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+div.panelUzy{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    text-decoration: violet;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.closeBtn {
+    background-color: #d40000;
+    border: 2px solid #680000;    color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.closeBtn:hover {
+    background-color: #680000;
+    border: 2px solid #d40000;    color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logoutSpan{
+    font-size: 35px;
+}
+
+.glowna {
+    background-color: #2196F3;
+    padding: 5px;
+    overflow: auto;
+}
+.menuBok {
+background-color: rgba(255, 255, 255, 0.8);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 0px;
+font-size: 30px;
+text-align: center;
+float: left;
+width: 20%;
+height: 600px;
+}
+
+.trescMenu {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+    float: right;
+    width: 79%;
+    height: 600px;
+}
+
+.przyciskMenu{
+    background-color: #0039d4;
+    border: 2px solid #002895;    color: rgb(0, 0, 0);
+    color: white;
+    width: 100%;
+    height: 75px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+}
+.przyciskMenu:hover{
+    background-color: #002895;
+    border: 2px solid #0039d4;    color: rgb(0, 0, 0);
+    color: white;
+    width: 100%;
+    height: 75px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.ogloszenia {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: #000000;
+    padding: 5px;
+}
+.ogloszenie {
+background-color: rgba(59, 59, 59, 0.8);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 20px;
+font-size: 30px;
+text-align: center;
+color: white;
+}
+
+.uploadPliku {
+    color: transparent;
+}
+.uploadPliku::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.uploadPliku::before {
+    content: 'Wybierz plik';
+    color: black;
+    background: -webkit-linear-gradient(top, #00e1ff, #00e1ff);
+    cursor: pointer;
+    font-weight: 500;
+    padding: 15px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+}
+
+.smallText{
+    font-size: 12px;
+}
+
+.ocena{
+    flex: auto;
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+.ocena:hover{
+    flex: auto;
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(0, 90, 0);
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.wydarzenie{
+    flex: auto;
+    float: left;
+    width: 150px;
+    height: auto;
+    background-color: green;
+    text-align: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    
+}
+
+.aWyda{
+    color: rgb(192, 192, 192);
+    font-style: italic;
+}
+
+.oceny{
+    width: 25%;
+}
+
+.propKon{
+    width: 5%;
+}
+
+.odczytaneTh{
+    width: 10px;
+}
+
+.dataTh{
+    width: 15%;
+}
+
+.tematTh{
+    width: 60%;
+}
+
+.nadawcaTh{
+    width: 20%;
+}
+
+.tematWiado{
+    width: 100%;
+    height: 35px;
+    font-size: 25px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(44, 44, 44);
+    border-style: solid;
+    border-radius: 0%;
+    color: rgb(255, 255, 255);
+}
+
+.wiadomoscWiado{
+    width: 100%;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(44, 44, 44);
+    border-style: solid;
+    border-radius: 0%;
+    color: rgb(255, 255, 255);
+}
+
+.dataWiado{
+    width: 75%;
+    height: 19px;
+    font-size: 17px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(44, 44, 44);
+    border-style: solid;
+    border-radius: 0%;
+    color: rgb(255, 255, 255);
+}
+
+.odczytanieWiado{
+    width: 25%;
+    height: 19px;
+    font-size: 17px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(44, 44, 44);
+    border-style: solid;
+    border-radius: 0%;
+    color: rgb(255, 255, 255);
+}
+
+.dzienTyg{
+    width: 14.28%;
+}
+
+.formTermin{
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+}
+
+.nieobecnosc{
+    height: 40px;
+    width: 175px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 40px;
+    text-align: center;
+    flex: auto;
+    float: left;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nieobecnosc:hover{
+    height: 40px;
+    width: 175px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 40px;
+    text-align: center;
+    flex: auto;
+    float: left;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    filter: brightness(85%);
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dataFrekwe{
+    width: 10%;
+}
+
+.nieobeFrekwe{
+    width: 90%;
+}
+
+li{
+    background-color: rgb(0, 0, 92);
+    color: white;
+    width: 500px;
+}
+
+li a{
+    color: white;
+}
+
+.adminPrzyciski{
+    background-color: rgb(78, 21, 21);
+}

@@ -1,0 +1,44 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" type="image/png" href="../assets/logo.png"/>
+        <title>Gubru</title>
+        <link rel="stylesheet" type="text/css" href="../style/style.css">
+        <div class="loginDiv">
+          Logged in as: student
+        </div> 
+<div class="topDiv">
+            <img src="../assets/logo.png" height="50px" width="50px"/>
+                Gubru
+            <button class="button" onclick='window.open("logout.html","_self")'>Log out</button>
+</div>
+<div class="menuDiv">
+            <button class="menuButton" onclick='window.open("panel.html","_self")'>User panel</button>
+            <button class="menuButton" onclick='window.open("ogloszenia.html","_self")'>Announcements</button>
+            <button class="menuButton" onclick='window.open("poczta.html","_self")'>Mail</button>
+            <button class="menuButton" onclick='window.open("plikiSzkoly.html","_self")'>School files</button>
+            <button class="menuButton" onclick='window.open("zadania.html","_self")'>Homework</button>
+            <button class="menuButton" onclick='window.open("terminarz.html","_self")'>Timetable</button>
+            <button class="menuButton" onclick='window.open("frekwencja.html","_self")'>Absence</button>
+            <button class="menuButton" onclick='window.open("mojeOceny.html","_self")'>Grades</button>
+            
+</div>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<div class="dziennikTop">Timetable</div>
+<div class="formTermin">
+  <form action="/html/terminarz.html" method="post" enctype="multipart/form-data" id="usrform">
+  <center>
+    <select name="miesiac" id="miesiac" class="loginorregister" style="width: 33.3%;"><option value="1">Jan</option><option value="2">Feb</option><option value="3">March</option><option value="4">Apr</option><option value="5" selected="selected">May</option><option value="6">Jun</option><option value="7">July</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select><select name="rok" id="rok" class="loginorregister" style="width: 33.3%;"><option value="2023">2023</option><option value="2024" selected="selected">2024</option><option value="2025">2025</option></select>    <br><input value="See" type="submit" name="submit" class="Loginbutton" style="width: 66.6%;">
+  </center>
+  </form>
+</div>
+<div id="ocenyTable"><table class="oceny" border="1">
+<thead>
+  <tr><th class="dzienTyg">Mo</th><th class="dzienTyg">Tu.</th><th class="dzienTyg">We.</th><th>Th.</th><th class="dzienTyg">Fr.</th><th class="dzienTyg">Sa.</th><th class="dzienTyg">Su.</th></tr>
+  <tr>
+
+
+<th bgcolor="gray">29</th><th bgcolor="gray">30</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr><tr><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th></tr><tr><th>20</th><th>21</th><th>22</th><th>23</th><th>24</th><th>25</th><th>26</th></tr><tr><th>27</th><th>28</th><th>29</th><th>30</th><th>31</th><th bgcolor="gray">1</th><th bgcolor="gray">2</th>
+</thead>
+</table></div>

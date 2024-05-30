@@ -1,0 +1,66 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="assets/logo.png"/>
+    <title>Gubru</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<div style="background-color: red; width: 100%; color: white; text-align: center; font-size: 19px;">
+    <b>!!! Website is still in building progress. Your informations may not be secure enaugh!!!</b>
+</div>
+<div class="topDiv">
+    <img src="assets/logo.png" height="50px" width="50px"/>
+    Gubru
+    <button class="button" onclick="window.open('index.html','_self')">Back to home</button>
+</div>
+<div class="container form-signin"></div>
+
+<form class="form-signin" role="form" onsubmit="return redirectUser()">
+    <h4 class="form-signin-heading"></h4>
+
+    <div class="loginForm">
+        Log in
+        <select name="option" class="loginorregister">
+            <option>Log in</option>
+            <option disabled>Create new</option>
+        </select>
+        <br>
+        <select id="username" name="username" class="loginorregister">
+            <option value="student">student</option>
+            <option value="teacher">teacher</option>
+            <option value="principal">principal</option>
+        </select>
+        <button class="Loginbutton" type="submit" name="login">Log in</button>
+    </div>
+</form>
+
+<div style="position:absolute; bottom:0; left:0; width:100%; height:60px; background-color: black;">
+    <div style="width: 50%; float: left;">
+        <a href="https://blazejczyk.net/" style="width: 50%; color: white;">blazejczyk.net</a>
+    </div>
+</div>
+
+<script>
+    function redirectUser() {
+        const username = document.getElementById('username').value;
+        let url = '';
+        
+        if (username === 'student') {
+            url = 'php_student/panel.html';
+        } else if (username === 'teacher') {
+            url = 'php_teacher/panel.html';
+        } else if (username === 'principal') {
+            url = 'php_principal/panel.html';
+        }
+
+        if (url) {
+            window.location.href = url;
+            return false;  // Prevent form submission
+        }
+        
+        return true;
+    }
+</script>
+</body>
+</html>

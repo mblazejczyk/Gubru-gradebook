@@ -1,0 +1,86 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" type="image/png" href="../assets/logo.png"/>
+        <title>Gubru</title>
+        <link rel="stylesheet" type="text/css" href="../style/style.css">
+        <div class="loginDiv">
+          Logged in as: student
+        </div> 
+<div class="topDiv">
+            <img src="../assets/logo.png" height="50px" width="50px"/>
+                Gubru
+            <button class="button" onclick='window.open("logout.html","_self")'>Log out</button>
+</div>
+<div class="menuDiv">
+            <button class="menuButton" onclick='window.open("panel.html","_self")'>User panel</button>
+            <button class="menuButton" onclick='window.open("ogloszenia.html","_self")'>Announcements</button>
+            <button class="menuButton" onclick='window.open("poczta.html","_self")'>Mail</button>
+            <button class="menuButton" onclick='window.open("plikiSzkoly.html","_self")'>School files</button>
+            <button class="menuButton" onclick='window.open("zadania.html","_self")'>Homework</button>
+            <button class="menuButton" onclick='window.open("terminarz.html","_self")'>Timetable</button>
+            <button class="menuButton" onclick='window.open("frekwencja.html","_self")'>Absence</button>
+            <button class="menuButton" onclick='window.open("mojeOceny.html","_self")'>Grades</button>
+            
+</div>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<script>
+function hideShowTable() {
+  var x = document.getElementById("ocenyTable");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function Edycjaoceny(a, b, waga, komentarz, data) {
+  hideShowTable();
+  var x = document.getElementById("edytujOcene");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+
+
+var mOce = document.getElementById("ocenaDoDod1");
+mOce.value=b;
+
+var wOce = document.getElementById("wagaOc1");
+wOce.value=waga;
+
+var kOce = document.getElementById("komOc1");
+kOce.value=komentarz;
+
+var dataOc = document.getElementById("dadaDod");
+dataOc.value=data;
+}
+
+</script>
+
+
+<div class="dziennikTop">Grade book</div>
+
+<div id="ocenyTable"><table class="oceny" border="1">
+      <thead>
+        <tr><th class="nrDziennika">Subjects</th><th class="oceny">semester I</th><th class="propKon">Av. (I)</th><th class="propKon">P (I)</th><th class="propKon">F (I)</th><th class="oceny">semester II"</th><th class="propKon">Av. (II)</th><th class="propKon">P (II)</th><th class="propKon">F (II)</th><th class="propKon">Av. (A)</th><th class="propKon">P (A)</th><th class="propKon">Annual</th></tr>
+
+
+<tr><th>Math</th><th><div class="ocena" onclick="Edycjaoceny(1, 5, 1, `Homework`, `2022-01-08`)">5</div><div class="ocena" onclick="Edycjaoceny(2, 3, 5, `Test`, `2022-01-08`)">3</div></th><th>3.33</th><th><div class="ocena" onclick="Edycjaoceny(3, 4, 0, `Proposed`, `2022-01-08`)">4</div></th><th><div class="ocena" onclick="Edycjaoceny(4, 4, 0, ``, `2022-01-08`)">4</div></th><th><div class="ocena" onclick="Edycjaoceny(5, 1, 3, `Short%20test`, `2022-01-08`)">1</div><div class="ocena" onclick="Edycjaoceny(6, 3, 5, `test`, `2022-01-08`)">3</div></th><th>2.25</th><th><div class="ocena" onclick="Edycjaoceny(7, 2, 0, ``, `2022-01-08`)">2</div></th><th></th><th>2.71</th><th></th><th></th></tr>
+</thead>
+</table></div>
+
+<div id="edytujOcene" style="display: none;">
+<div class="loginForm">
+  <button onclick="Edycjaoceny(0, 0)" class="closeBtn">X</button><br>
+  Grade: <br><input type="text" name="ocena" id="ocenaDoDod1" size="40" maxlength="1" type="text" class = "inputLogin" disabled><br>
+  Weight: <br><input type="text" name="ocena" id="wagaOc1" size="40" maxlength="1" type="text" class = "inputLogin" disabled>
+  Comment: <br><input type="text" name="ocena" id="komOc1" size="40" maxlength="128" type="text" class = "inputLogin" disabled>
+  Added: <br><input type="text" name="ocena" id="dadaDod" size="40" maxlength="128" type="text" class = "inputLogin" disabled>
+  </div>
+</div>

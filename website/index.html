@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/style/style.css">
+        <link rel="icon" type="image/png" href="/assets/logo.png"/>
+        <title>Gubru</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <script>
+        var y = "0";
+        function zmianaMenu(a){
+            if(y == a){
+                return;
+            }
+            var o = document.getElementById(y);
+            var x = document.getElementById(a);
+
+            var idTemp = "b" + a;
+            var b = document.getElementById(idTemp);
+            b.style.backgroundColor = "green";
+
+            var idTempP = "b" + y;
+            var p = document.getElementById(idTempP);
+            p.style.backgroundColor = "#0039d4";
+
+            x.style.display = "block";
+            o.style.display = "none";
+            y = a;
+        }
+
+        function change(){
+            if(document.getElementById("cb").checked){
+                document.getElementById("logBut").disabled = false;
+            }else{
+                document.getElementById("logBut").disabled = true;
+            }
+        }
+    </script>
+
+    <body>
+        <div class="topDiv">
+            <img src="/assets/logo.png"  height="50px" width="50px"/>
+                Gubru
+            <label style="font-size: 14px; text-align: right; right: 119px; position: absolute;">I accept <a href="https://gubru.blazejczyk.net/CookiePolicy.pdf" target="_blank" style="color: white;">cookie policy</a> <input type="checkbox" id="cb" onchange="change()"></label>
+            <button class="button" id="logBut" onclick="window.open('/php/zaloguj.php','_self')" disabled>Log in</button>
+        </div>  
+
+
+        <div class="glowna">
+            <div class="menuBok">
+                <button onclick="zmianaMenu(0)" class="przyciskMenu" id="b0" style="background-color: green;">Menu</button><br>
+                <button onclick="zmianaMenu(1)" class="przyciskMenu" id="b1">News</button><br>
+                <button onclick="zmianaMenu(2)" class="przyciskMenu" id="b2">Info</button><br>
+                <button onclick="zmianaMenu(3)" class="przyciskMenu" id="b3">Contact</button><br>
+            </div>
+            <div class="trescMenu" id="0" style="overflow: auto;">
+                <h1>Welcome at Gubru</h1>
+                <p>Gubru is an online journal that will facilitate your contact with teachers and keep you up to date</p>
+
+                <h1>Important demo information</h1>
+                <p>Demo Gubru website is created just to look around every user type in Gubru online gradebook. You will be able to see everything that users can do however you cannot make any changes.
+                    Everytime you use tool that should make some changes, you will be informed that this is only demo so you will not see any edited informations.
+                    This was created so demo version will stay clean from any bad languages or website breaking changes users could make.
+                    Also by this no one can share private informations around our database as we do not want to manage any sensitive data.
+                </p>
+            </div>
+            <div class="trescMenu" id="1" style="display:none">
+                <h1>Gradebook tests are in progress</h1>
+                <p>The tests of the Gubru electronic gradebook are still underway. During this time, please report all bugs
+                    what appear. We apologize for any problems.
+                </p>
+            </div>
+            <div class="trescMenu" id="2" style="display:none">
+                <h1>Gradebook Gubru</h1>
+                <p>
+                    Gradebook Gubru is the perfect alternative to all other evaluation and attendance monitoring systems.
+                    We offer all the most important items that should appear in the journal. Attendance, ratings,
+                    planner, news and homework in one place!
+                </p>
+            </div>
+            <div class="trescMenu" id="3" style="display:none">
+                <h1>Contact</h1>
+                <p>Only email support available: <a href="mailto:support@yellowsink.pl">support@yellowsink.pl</a></p>
+            </div>
+        </div>
+        <div style="position:absolute;
+   bottom:0;
+left: 0;
+   width:100%;
+   height:60px;
+    background-color: black;">
+    <div style="width: 50%; float: left;"><a href="https://yellowsink.pl/" style="width: 50%; color: white;">Yellowsink.pl</a></div>
+<div style="width: 50%; float: left; text-align: right;"><a href="https://yellowsink.pl/privacypolicy.html" style="color: white;">PrivacyPolicy</a> <a href="https://gubru.blazejczyk.net/CookiePolicy.pdf" target="_blank" style="color: white;">cookie policy</a> </div>
+</div>
+
+    </body>
+</html>
